@@ -1,7 +1,7 @@
 Team Members :-
 
-Somya ranjan singh
-Sunil hooda
-Shivam khare
-Sudhir kumar singh
-Kunal deotale
+Somya ranjan singh- movies
+Sunil hooda - navbar , footer , register , login
+Shivam khare- tv shows
+Sudhir kumar singh- homepage
+Kunal deotale- news
