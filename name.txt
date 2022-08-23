@@ -1,7 +1,15 @@
 Team Members :-
 
+<<<<<<< HEAD
 Somya ranjan singh- movies
 Sunil hooda - navbar , footer , register , login
 Shivam khare- tv shows
 Sudhir kumar singh- homepage
 Kunal deotale- news
+=======
+Somya ranjan singh
+Sunil hooda
+Shiwam khare
+Sudhir kumar singh
+Kunal deotale
+>>>>>>> d057a3220685669bf01af431c567fb89a9fd36c0
