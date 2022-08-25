@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZEE5: AboutUs</title>
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./footer.css" />
+    <style>
+      /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      } */
+      #sh_navbar {
+        position: sticky;
+        top: 0px;
+        z-index: 10;
+      }
+      #sh_aboutUs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: #0f0617;
+      }
+      #sh_aboutUs > div {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #0f0617;
+        color: white;
+        /* border: 1px solid green; */
+        padding: 10px 15px 10px 15px;
+      }
+      #sh_aboutUs > div > h1 {
+        text-align: center;
+        margin: auto;
+        /* margin-top: 10px; */
+      }
+      #sh_aboutUs > div > p {
+        width: 96.5%;
+        text-align: left;
+        margin: auto;
+        line-height: 1.5;
+        font-size: 18px;
+      }
+      #sh_blank {
+        width: 100%;
+        height: 500px;
+      }
+      .sh_blury {
+        position: sticky;
+        height: auto;
+        width: 100%;
+        color: grey;
+        background-color: #0d0812;
+        /* backdrop-filter: blur(5px); */
+        top: 10;
+        left: 0;
+        opacity: 0.7;
+        z-index: -1;
+      }
+      .sh_blury1 {
+        position: sticky;
+        width: 100%;
+        height: auto;
+        color: grey;
+        background-color: #080110;
+        bottom: 0;
+        left: 0;
+        opacity: 0.7;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sh_navbar"></div>
+    <div id="sh_result"></div>
+    <div id="sh_aboutUs">
+      <div>
+        <h1>About Us</h1>
+        <br />
+        <p>
+          At Zee5, the online video streaming Over The Top (OTT) platform, we
+          truly believe that for entertainment to come alive, you need to feel
+          it. That’s where Zee5 brings in the advantage of the language of your
+          comfort! With 12 navigational and featured languages across original
+          features, live TV, catch up TV, lifestyle shows, children's
+          programmes, exclusive short series and acclaimed plays - it’s
+          unlimited entertainment in the language that sounds like home. Zee5
+          offers an exhaustive array of content; with 90+ live TV channels and
+          1.25 lac+ hours of viewing across the languages of English, Hindi,
+          Bengali, Malayalam, Tamil, Telugu, Kannada, Marathi, Oriya, Bhojpuri,
+          Gujarati & Punjabi making it a complete video destination for OTT
+          viewers. Our exhaustive selection of Bollywood and language movies
+          make us the preferred destination for an avid cinema connoisseur.
+        </p>
+        <br />
+        <br />
+        <p>
+          We offer a comfortable and friendly user experience with highly
+          evolved video streaming technology at amazing speed and crystal clear
+          sounds. Language Navigation, Seamless Video playback, Smart Content
+          Search & recommendation, option to choose video quality and much more
+          create a video experience like no other. All you need is a compatible
+          connected device. Tune into Zee5 now, in your language!
+        </p>
+        <br /><br />
+        <p>
+          Zee5 can be accessed at www.zee5.com and application for downloading
+          on mobile, tablet, laptop, desktop, etc. is available on the Google
+          Play Store and Apple App Store.
+        </p>
+        <br />
+        <br />
+      </div>
+      <div id="sh_blank"></div>
+    </div>
+    <div id="sh_footer"></div>
+  </body>
+</html>
+<script type="module">
+  import {
+    navbar,
+    getData,
+    appendData,
+    main,
+    debouncing,
+    id,
+  } from "./navcom.js";
+  import footer from "./footer.js";
+  // console.log(footer);
+
+  // console.log(navbar);
+
+  let navContainer = document.getElementById("sh_navbar");
+  navContainer.innerHTML = navbar();
+
+  document.getElementById("search").addEventListener("input", debouncing);
+
+  document.getElementById("search").addEventListener("focus", () => {
+    document.getElementById("sh_aboutUs").setAttribute("class", "sh_blury");
+    document.getElementById("sh_footer").setAttribute("class", "sh_blury1");
+  });
+
+  document.getElementById("search").addEventListener("focusout", () => {
+    document.getElementById("sh_aboutUs").setAttribute("class", "");
+    document.getElementById("sh_footer").setAttribute("class", "");
+  });
+
+  let footContainer = document.getElementById("sh_footer");
+  footContainer.innerHTML = footer();
+</script>
