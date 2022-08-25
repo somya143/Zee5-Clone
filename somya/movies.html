@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #top{
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+        #top>img{
+            width: 100%;
+            height: 350px;
+            
+        }
+        #top>button{
+            position: absolute;
+            top: 130px;
+            
+        }
+        #top>button:nth-child(2){
+            left: 50px;
+        }
+        #top>button:nth-child(3){
+            right: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="top">
+
+        <img src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z568055/cover/1170x658withlogofd047a507ba8417ab8080f3d31e79cd5.jpg" alt="">
+
+        <button><</button>
+        <button>></button>
+
+    </div>
+</body>
+</html>
+<script>
+
+let imgNum = 0;
+let img = document.querySelector("img");
+
+let button = document.querySelectorAll("button");
+
+
+
+let imageArray = [
+
+"https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z5145103/cover/1170x658withlogo5b18fb5da683450b82714d741dcfa67b.jpg",
+
+"https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-movie_1921832123/cover/00movie1921832123inlist.jpg",
+
+"https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z524435/cover/1170x658withlogo48c25644371544e79a12a262184a14bc.jpg",
+
+"https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-199529/cover/00199529inlis1911854783b40ef40aeea54163b2bc27bbaab8a368.jpg",
+
+];
+
+ button[0].addEventListener("click" , function(){
+
+    if(imgNum===0){
+        imgNum = imageArray.length-1;
+    } else{
+        imgNum--;
+    }
+
+    img.src = imageArray[imgNum];
+ })
+
+ button[1].addEventListener("click" , function(){
+
+if(imgNum===imageArray.length-1){
+    imgNum = 0;
+} else{
+    imgNum++;
+}
+
+img.src = imageArray[imgNum];
+})
+
+ console.log(imgNum)
+
+
+
+
+
+</script>
