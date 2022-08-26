@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  background-color: #0f0617;
+  color: white;
+}
+
+.carousel-cell > a  {
+ text-decoration: none;
+ color: white;
+ width: 30%;
+}
+
+.carousel-cell > a >img{
+    width: 300px;
+    height: 250px;
+}
