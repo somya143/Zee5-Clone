@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="./navbar.css" />
     <link rel="stylesheet" href="./footer.css" />
     <style>
-      /* * {
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-      } */
+      }
       #sh_navbar {
         position: sticky;
         top: 0px;
@@ -50,33 +50,6 @@
         margin: auto;
         line-height: 1.5;
         font-size: 18px;
-      }
-      #sh_blank {
-        width: 100%;
-        height: 500px;
-      }
-      .sh_blury {
-        position: sticky;
-        height: auto;
-        width: 100%;
-        color: grey;
-        background-color: #0d0812;
-        /* backdrop-filter: blur(5px); */
-        top: 10;
-        left: 0;
-        opacity: 0.7;
-        z-index: -1;
-      }
-      .sh_blury1 {
-        position: sticky;
-        width: 100%;
-        height: auto;
-        color: grey;
-        background-color: #080110;
-        bottom: 0;
-        left: 0;
-        opacity: 0.7;
-        z-index: -1;
       }
     </style>
   </head>
@@ -121,9 +94,9 @@
         <br />
         <br />
       </div>
-      <div id="sh_blank"></div>
+      <div id="sh_footer"></div>
     </div>
-    <div id="sh_footer"></div>
+    <!-- <div id="sh_footer"></div> -->
   </body>
 </html>
 <script type="module">
@@ -134,6 +107,10 @@
     main,
     debouncing,
     id,
+    // login,
+    // logIN,
+    // loggeduesr,
+    // logout,
   } from "./navcom.js";
   import footer from "./footer.js";
   // console.log(footer);
@@ -147,14 +124,20 @@
 
   document.getElementById("search").addEventListener("focus", () => {
     document.getElementById("sh_aboutUs").setAttribute("class", "sh_blury");
-    document.getElementById("sh_footer").setAttribute("class", "sh_blury1");
+    // document.getElementById("sh_footer").setAttribute("class", "sh_blury1");
   });
 
   document.getElementById("search").addEventListener("focusout", () => {
     document.getElementById("sh_aboutUs").setAttribute("class", "");
-    document.getElementById("sh_footer").setAttribute("class", "");
+    // document.getElementById("sh_footer").setAttribute("class", "");
   });
 
   let footContainer = document.getElementById("sh_footer");
   footContainer.innerHTML = footer();
+
+  logIN();
+
+  if (login) {
+    logout();
+  }
 </script>

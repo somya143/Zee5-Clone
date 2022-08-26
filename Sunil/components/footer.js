@@ -2,6 +2,7 @@ let footer = () => {
   return `<div id="sh_footer">
   <hr
   style="
+    width : 100%;
     height: 1px;
     border-width: 0;
     background-color: hsla(0, 0%, 100%, 0.5);

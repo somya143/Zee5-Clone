@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZEE5: SignUp</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="./footer.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #sh_container {
+        width: 100%;
+        height: auto;
+        background-color: #0f0617;
+        padding-top: 50px;
+      }
+      #sh_main {
+        width: 22%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-color: #0f0617;
+        color: white;
+        justify-content: center;
+        align-items: center;
+      }
+      #sh_main > h3 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #sh_main > p {
+        text-align: center;
+        margin-bottom: 20px;
+        color: hsla(0, 0%, 100%, 0.5);
+      }
+      #sh_main > span > button {
+        width: 330px;
+        margin-bottom: 30px;
+        padding: 2px;
+        background-color: white;
+        border-radius: 10px;
+        color: deeppink;
+        font-weight: bold;
+        font-size: 15px;
+        margin-top: 20px;
+      }
+      #sh_main > span > button > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: deeppink;
+        font-weight: bold;
+        font-size: 15px;
+        text-decoration: none;
+      }
+      #sh_main > span > button > a > img {
+        width: 45px;
+        height: 45px;
+      }
+      #sh_main > div {
+        width: 35px;
+        height: 35px;
+        /* border: 1px dotted lightgray; */
+        border-radius: 50px;
+        background-color: #2c054f;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 5px;
+        padding-top: 7px;
+      }
+      #sh_main > form > input {
+        background-color: #0f0617;
+        border: 0px;
+        color: hsla(0, 0%, 100%, 0.5);
+      }
+
+      #sh_main > form > input:focus {
+        outline: 0px;
+        color: white;
+        height: 25px;
+      }
+      /* #sh_main > form > input:focus label {
+        margin-bottom: 5px;
+      } */
+      #sh_main > form > input + br + hr {
+        border-width: 0.2px;
+        color: darkgrey;
+        margin-bottom: 8px;
+      }
+      #form > p {
+        margin-top: 15px;
+        font-size: 14.5px;
+      }
+      #form > p > a {
+        color: blueviolet;
+        text-decoration: none;
+      }
+      #form > button {
+        width: 330px;
+        height: 45px;
+        margin-bottom: 20px;
+        padding: 2px;
+        background-color: #0f0617;
+        border-radius: 10px;
+        color: hsla(0, 0%, 100%, 0.5);
+        font-weight: bold;
+        font-size: 15px;
+        margin-top: 20px;
+        outline: 1px solid hsla(0, 0%, 100%, 0.5);
+        border: 0px;
+        cursor: pointer;
+      }
+      #sh_main > p:last-child {
+        font-size: 14.5px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: white;
+      }
+      #sh_main > p:last-child > a {
+        color: blueviolet;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sh_navbar"></div>
+    <div id="sh_result"></div>
+
+    <div id="sh_container">
+      <div id="sh_main">
+        <h3>Create a new account</h3>
+        <p>
+          Create an account to continue enjoying uninterrupted video and
+          personalised experience
+        </p>
+        <span
+          ><button>
+            <a
+              href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.zee5.com%3Fid%3Dauth434459&response_type=permission%20id_token&scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&client_id=171585693881-93jei1bqpoaejkq5ha63iemuq8bbmoar.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.zee5.com&fetch_basic_profile=true&gsiwebsdk=2&flowName=GeneralOAuthFlow"
+              target="_blank"
+            >
+              <img
+                src="https://www.zee5.com/images/google-social-icon-circle.svg?ver=2.51.89"
+                alt=""
+              />Sign in</a
+            >
+          </button></span
+        >
+        <div>or</div>
+        <form id="form">
+          <label for="" class="label">User Name</label> <br />
+          <input type="text" id="sh_name" /> <br />
+          <hr />
+          <label for="" class="label">Enter Email</label> <br />
+          <input type="email" id="sh_email" /> <br />
+          <hr />
+          <label for="" class="label">Password</label> <br />
+          <input type="password" id="sh_password" /><br />
+          <hr />
+          <label for="" class="label">Mobile Number</label> <br />
+          <input type="text" id="sh_number" />
+          <br />
+          <hr />
+          <p>
+            By proceeding you agree to our
+            <a href="https://www.zee5.com/termsofuse">Terms of Services</a> &
+            <a href="https://www.zee5.com/privacypolicy">Privacy Policy</a>
+          </p>
+          <br />
+          <button id="sign_up">Sign-Up</button>
+        </form>
+        <p>Already registered? <a href="./login.html">Login</a></p>
+      </div>
+      <div id="sh_footer"></div>
+    </div>
+  </body>
+</html>
+<script type="module">
+  import {
+    navbar,
+    getData,
+    appendData,
+    main,
+    debouncing,
+    id,
+  } from "./navcom.js";
+
+  import footer from "./footer.js";
+
+  let navContainer = document.getElementById("sh_navbar");
+  navContainer.innerHTML = navbar();
+
+  document.getElementById("search").addEventListener("input", debouncing);
+
+  document.getElementById("search").addEventListener("focus", () => {
+    document.getElementById("sh_container").setAttribute("class", "sh_blury");
+  });
+
+  document.getElementById("search").addEventListener("focusout", () => {
+    document.getElementById("sh_container").setAttribute("class", "");
+  });
+
+  let footContainer = document.getElementById("sh_footer");
+  footContainer.innerHTML = footer();
+
+  // <------------ Sign Up Funtionality --------->
+  let userData = JSON.parse(localStorage.getItem("users")) || [];
+
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let name = form.sh_name.value;
+    let email = form.sh_email.value;
+    let password = form.sh_password.value;
+    let number = form.sh_number.value;
+
+    if (name === "") {
+      alert("Enter User Name");
+      return false;
+    }
+    if (email === "") {
+      alert("Enter Email-Id");
+      return false;
+    }
+    if (password.length < 5) {
+      alert("Your Password should be more than 5 letters");
+      return false;
+    }
+    if (number.length < 10) {
+      alert("Please provide 10 digit number");
+      return false;
+    }
+
+    let check = userData.filter((el) => {
+      return el.email === email;
+    });
+
+    if (check.length > 0) {
+      alert("User already exists!");
+    } else {
+      let user = new User(name, email, password, number);
+
+      userData.push(user);
+      localStorage.setItem("users", JSON.stringify(userData));
+      alert("Sign-Up Successfull");
+      form.reset();
+      window.location.href = "login.html";
+    }
+  });
+
+  // class
+
+  class User {
+    constructor(n, e, p, m) {
+      this.name = n;
+      this.email = e;
+      this.password = p;
+      this.number = m;
+    }
+  }
+</script>

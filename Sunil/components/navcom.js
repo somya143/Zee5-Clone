@@ -7,9 +7,9 @@ let navbar = () => {
       alt=""
     />
   </div>
-  <div><a href="../index.html">Home</a></div>
-  <div><a href="../shiwam/TV-Shows.html">TV Shows</a></div>
-  <div><a href="../somya/movies.html">Movies</a></div>
+  <div><a href="./index.html">Home</a></div>
+  <div><a href="./shiwam/TV-Shows.html">TV Shows</a></div>
+  <div><a href="./somya/movies.html">Movies</a></div>
   <div><a href="">Web Series</a></div>
   <div><a href="">News</a></div>
   <div id="sh_dropDown">
@@ -45,7 +45,7 @@ let navbar = () => {
     id="search"
     placeholder="Search for Movies, Shows etc"
   />
-  <button id="login"><a href="">LOGIN</a></button>
+  <button id="login"><a id="loggedin" href="./login.html">LOGIN</a></button>
   <button id="buyplan">
     <a href="">BUY PLAN</a>
   </button>
@@ -135,4 +135,34 @@ let click = (data) => {
 //   console.log(2);
 // });
 
-export { navbar, getData, appendData, main, debouncing, id };
+// let login = localStorage.getItem("login") || false;
+// let loggeduesr = JSON.parse(localStorage.getItem("LoggedIn"));
+// let logIN = () => {
+//   if (login) {
+//     document.getElementById(
+//       "loggedin"
+//     ).innerText = `${loggeduesr[0].name} / LOGOUT`;
+//     document.getElementById("login").style.width = "200px";
+//   }
+// };
+
+// let logout = () => {
+//   document.getElementById("login").addEventListener("click", () => {
+//     login = false;
+//     document.getElementById("loggedin").innerText = "LOGIN";
+//     window.location.href = "#";
+//   });
+// };
+
+export {
+  navbar,
+  getData,
+  appendData,
+  main,
+  debouncing,
+  id,
+  // login,
+  // logIN,
+  // loggeduesr,
+  // logout,
+};

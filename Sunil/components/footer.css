@@ -6,7 +6,7 @@
 #sh_footer {
   width: 100%;
   height: auto;
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -14,7 +14,7 @@
   background-color: #0f0617;
 }
 #sh_firstdiv {
-  width: 85%;
+  width: 95%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -42,7 +42,7 @@
   border-radius: 27px;
 }
 #sh_seconddiv {
-  width: 85%;
+  width: 95%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -62,7 +62,7 @@
   color: lightgrey;
 }
 #sh_thirddiv {
-  width: 85%;
+  width: 95%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -92,7 +92,7 @@
   color: #8230c6;
 }
 #sh_fourthdiv {
-  width: 85%;
+  width: 95%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -106,4 +106,40 @@
 #sh_fourthdiv > p {
   color: hsla(0, 0%, 100%, 0.5);
   font-size: 14px;
+}
+@media all and (min-width: 350px) and (max-width: 900px) {
+  #sh_footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    background-color: #0f0617;
+  }
+  #sh_firstdiv {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #sh_thirddiv {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 0px;
+  }
 }

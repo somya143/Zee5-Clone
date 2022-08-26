@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZEE5: Login</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="./footer.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #sh_container {
+        width: 100%;
+        height: auto;
+        background-color: #0f0617;
+        padding-top: 50px;
+      }
+      #sh_main {
+        width: 20%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-color: #0f0617;
+        color: white;
+        justify-content: center;
+        align-items: center;
+      }
+      #sh_main > h3 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #sh_main > p {
+        text-align: center;
+        margin-bottom: 20px;
+        color: hsla(0, 0%, 100%, 0.5);
+      }
+      #sh_main > span > button {
+        width: 250px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 30px;
+        padding: 2px;
+        border-radius: 10px;
+        margin-top: 20px;
+        background-color: #0f0617;
+        border: 0px;
+      }
+      #sh_main > span > button > a > img {
+        width: 35px;
+        height: 35px;
+      }
+      #sh_main > div {
+        width: 35px;
+        height: 35px;
+        /* border: 1px dotted lightgray; */
+        border-radius: 50px;
+        background-color: #2c054f;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 5px;
+        padding-top: 7px;
+      }
+      #sh_main > form > input {
+        background-color: #0f0617;
+        border: 0px;
+      }
+      #sh_main > form > input:focus {
+        outline: 0px;
+        color: white;
+        height: 25px;
+      }
+      #sh_main > form > input + br + hr {
+        border-width: 0.2px;
+        color: darkgrey;
+        margin-bottom: 8px;
+      }
+      #form > p {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14.5px;
+      }
+      #form > p > a {
+        color: blueviolet;
+        text-decoration: none;
+      }
+      #form > button {
+        width: 330px;
+        height: 45px;
+        margin-bottom: 20px;
+        padding: 2px;
+        background-color: #0f0617;
+        border-radius: 10px;
+        color: hsla(0, 0%, 100%, 0.5);
+        font-weight: bold;
+        font-size: 15px;
+        margin-top: 20px;
+        outline: 1px solid hsla(0, 0%, 100%, 0.5);
+        border: 0px;
+        cursor: pointer;
+      }
+      #sh_main > p:last-child {
+        font-size: 14.5px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: white;
+      }
+      #sh_main > p:last-child > a {
+        color: blueviolet;
+        text-decoration: none;
+      }
+      .sh_blury {
+        position: sticky;
+        height: auto;
+        width: 100%;
+        color: grey;
+        background-color: #0d0812;
+        /* backdrop-filter: blur(5px); */
+        top: 10;
+        left: 0;
+        opacity: 0.7;
+        z-index: -1;
+      }
+
+      /* @media all and (min-width: 350px) and (max-width: 900px) {
+        #sh_container {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          margin: auto;
+          height: auto;
+          background-color: #0f0617;
+          padding-top: 50px;
+          justify-content: space-between;
+        }
+        #sh_main {
+          width: 10%;
+          height: auto;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          background-color: #0f0617;
+          color: white;
+          justify-content: center;
+          align-items: center;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="sh_navbar"></div>
+    <div id="sh_result"></div>
+
+    <div id="sh_container">
+      <div id="sh_main">
+        <h3>Login to ZEE5</h3>
+        <p>
+          Login to continue enjoying uninterrupted video and personalised
+          experience.
+        </p>
+        <span
+          ><button>
+            <a
+              href="https://appleid.apple.com/auth/authorize?client_id=com.zee5.pwa&redirect_uri=https%3A%2F%2Fwww.zee5.com&response_type=code%20id_token&state=origin%3Aweb&scope=name%20email&response_mode=web_message&frame_id=63ee945f-8079-4055-8229-c56cce12a435&m=11&v=1.5.4"
+              ><img
+                src="https://www.zee5.com/images/apple-social-icon-circle.svg?ver=2.51.89"
+                alt=""
+            /></a>
+
+            <a
+              href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.zee5.com%3Fid%3Dauth434459&response_type=permission%20id_token&scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&client_id=171585693881-93jei1bqpoaejkq5ha63iemuq8bbmoar.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.zee5.com&fetch_basic_profile=true&gsiwebsdk=2&flowName=GeneralOAuthFlow"
+              target="_blank"
+            >
+              <img
+                src="https://www.zee5.com/images/google-social-icon-circle.svg?ver=2.51.89"
+                alt=""
+            /></a>
+            <a
+              href="https://www.facebook.com/login.php?skip_api_login=1&api_key=771609066382248&kid_directed_site=0&app_id=771609066382248&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.10%2Fdialog%2Foauth%3Fapp_id%3D771609066382248%26cbt%3D1661508374072%26channel_url%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Df2e3d1c38ff7a88%2526domain%253Dwww.zee5.com%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Fwww.zee5.com%25252Ff26b75284de00e8%2526relation%253Dopener%26client_id%3D771609066382248%26display%3Dpopup%26domain%3Dwww.zee5.com%26e2e%3D%257B%257D%26fallback_redirect_uri%3Dhttps%253A%252F%252Fwww.zee5.com%252Fsignin%26locale%3Den_US%26logger_id%3Dff259b10e485e%26origin%3D1%26redirect_uri%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Df1aefbdad6976d%2526domain%253Dwww.zee5.com%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Fwww.zee5.com%25252Ff26b75284de00e8%2526relation%253Dopener%2526frame%253Df42941b15fa488%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%26sdk%3Djoey%26version%3Dv2.10%26ret%3Dlogin%26fbapp_pres%3D0%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df1aefbdad6976d%26domain%3Dwww.zee5.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.zee5.com%252Ff26b75284de00e8%26relation%3Dopener%26frame%3Df42941b15fa488%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied&display=popup&locale=en_GB&pl_dbl=0"
+              ><img
+                src="https://www.zee5.com/images/fb-social-icon-circle.svg?ver=2.51.89"
+                alt=""
+            /></a>
+            <a
+              href="https://api.twitter.com/oauth/authenticate?oauth_token=Hb94YQAAAAAA2CPSAAABgtmekLw&force_login=false"
+              ><img
+                src="https://www.zee5.com/images/twitter-social-icon.svg?ver=2.51.89"
+                alt=""
+            /></a></button
+        ></span>
+        <div>or</div>
+        <form id="form">
+          <label for="">Enter Email</label> <br />
+          <input type="email" id="sh_email" /> <br />
+          <hr />
+          <label for="">Password</label> <br />
+          <input type="password" id="sh_password" /><br />
+          <hr />
+          <p>
+            <a href="./forgotpassword.html">Forgot Password?</a>
+          </p>
+          <br />
+          <button id="sh _login">Log In</button>
+        </form>
+        <p>New to ZEE5? <a href="./signup.html">Register</a></p>
+      </div>
+      <div id="sh_footer"></div>
+    </div>
+  </body>
+</html>
+<script type="module">
+  import {
+    navbar,
+    getData,
+    appendData,
+    main,
+    debouncing,
+    id,
+  } from "./navcom.js";
+
+  import footer from "./footer.js";
+
+  let navContainer = document.getElementById("sh_navbar");
+  navContainer.innerHTML = navbar();
+
+  document.getElementById("search").addEventListener("input", debouncing);
+
+  document.getElementById("search").addEventListener("focus", () => {
+    document.getElementById("sh_container").setAttribute("class", "sh_blury");
+  });
+
+  document.getElementById("search").addEventListener("focusout", () => {
+    document.getElementById("sh_container").setAttribute("class", "");
+  });
+
+  let footContainer = document.getElementById("sh_footer");
+  footContainer.innerHTML = footer();
+
+  //<------------ Login Functionality ------>
+
+  let userData = JSON.parse(localStorage.getItem("users")) || [];
+
+  const form = document.querySelector("form");
+
+  let check = [];
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let email = form.sh_email.value;
+    let password = form.sh_password.value;
+
+    check = userData.filter((el) => {
+      return el.email === email && el.password === password;
+    });
+
+    if (check.length > 0) {
+      localStorage.setItem("login", "true");
+      // console.log(check);
+      localStorage.setItem("LoggedIn", JSON.stringify(check));
+      alert("Login successful!");
+      form.reset();
+      window.location.href = "about.html";
+    } else {
+      alert("Wrong credentials");
+    }
+  });
+
+  export default check;
+</script>
