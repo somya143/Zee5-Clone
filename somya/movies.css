@@ -85,3 +85,39 @@ body{
  #ad{
     margin-left: 25%;
  }
+
+ /* movies-middle-part3 */
+
+ #Movies-p3>p{
+    font-size: 30px;
+    color: white;
+    padding-left: 40px;
+    padding-top: 20px;
+ }
+ #Movies-p3{
+    margin-top: 5rem;
+}
+
+/* movies-middle-part4 */
+
+#Movies-p4>p{
+    font-size: 30px;
+    color: white;
+    padding-left: 40px;
+    padding-top: 20px;
+ }
+ #Movies-p4{
+    margin-top: 5rem;
+}
+
+/* movies-middle-part5 */
+
+#Movies-p5>p{
+    font-size: 30px;
+    color: white;
+    padding-left: 40px;
+    padding-top: 20px;
+ }
+ #Movies-p5{
+    margin-top: 5rem;
+}
