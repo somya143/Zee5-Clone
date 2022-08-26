@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    background-color: 
+    #0f0617;
+}
+
+#kd_mainHeading{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    
+}
+#kd_mainHeading >div>img{
+width: 65%;
+border-radius: 1rem;
+}
+h1{
+    font-size: 5rem;
+    margin-top: 2rem;
+    padding-left: 6rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+#kd_mainHeading >div>h4{
+    font-size: 2rem;
+   width: 50%;
+   color: white;
+   margin-top: 2rem;
+}
+
+#kd_mainHeading >div{
+    width: 90%;
+    margin:auto;
+    cursor: pointer;
+}
