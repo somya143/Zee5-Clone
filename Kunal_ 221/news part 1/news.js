@@ -12,11 +12,18 @@ let getData = async () => {
 };
 getData();
 
+let array = JSON.parse(localStorage.getItem("news")) || [];
+
 function appendData(data) {
   let container = document.getElementById('kd_mainHeading')
   data.forEach((el) => {
     // console.log('el:', el)
     let div = document.createElement('div');
+    div.addEventListener("click", () => {
+      array.push(el);
+      localStorage.setItem("news", JSON.stringify(array));
+      window.location.href = '../show news/show.html'
+    });
     let img = document.createElement("img");
     img.src = el.urlToImage;
     let Title = document.createElement("h4");

@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    background-color: #0f0617;
+    color: white;
+}
+
+h1{
+font-size: 5rem;
+margin-top: 2rem;
+padding-left: 5rem;
+margin-bottom: 2rem;
+}
+
+#kd_show{
+    width: 85%;
+    margin: auto;
+    
+}
+
+#kd_show>div>img{
+    width: 100%;
+}
+
+#kd_show>div>p{
+   font-size: 2rem;
+   line-height: 4rem;
+   margin-top: 2rem;
+}
+
+.kd_btn{
+    display:block;
+    width: 25%;
+    margin: auto;
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 5rem;
+    cursor: pointer;
+}
