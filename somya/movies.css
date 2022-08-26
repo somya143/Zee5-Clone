@@ -13,37 +13,60 @@ body{
 }
 
 
-/* ----LIVE NEWS----LIVE NEWS----LIVE NEWS----LIVE NEWS----LIVE NEWS----LIVE NEWS */
+/* middle--part--moviespage */
 
 
 .carousel-cell{
    padding-left: 2rem;
    cursor: pointer;
-   border: red;
+   
 }
-#kd_liveNews{
+#liveMovies{
     margin-top: 5rem;
 }
-#kd_liveNews>h2{
-    /* margin-bottom: 3rem; */
+/* #liveMovies>h2{
+    
+    color: white;
+    font-family:NotoSansMedium, sans-serif;
+    font-size:2.1rem;
+    font-weight:500;
+    padding-left: 4rem;
+} */
+
+.transfor>img{
+    width: 100%;
+    margin-bottom: 2rem;
+    /* border: 5px solid red; */
+}
+.transfor{
+    margin-top: 4rem;
+    /* border: 5px solid red; */
+}
+#liveMovies>p{
+    font-size: 30px;
+    color: white;
+    padding-left: 40px;
+}
+
+/* movies--middle-part2 */
+
+#Movies{
+    margin-top: 5rem;
+}
+#Movies>p{
+    
     color: white;
     font-family:NotoSansMedium, sans-serif;
     font-size:2.1rem;
     font-weight:500;
     padding-left: 4rem;
 }
-
-.transfor>img{
+.trans>img{
     width: 100%;
     margin-bottom: 2rem;
+    /* border: 5px solid red; */
 }
-.transfor{
+.trans{
     margin-top: 4rem;
-}
-
-.transfor>p{
-    color: white;
-    font-size: 2rem;
-    font-family:NotoSansMedium, sans-serif;
-    margin-top: 1rem;
+    /* border: 5px solid red; */
 }
