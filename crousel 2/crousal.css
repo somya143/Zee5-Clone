@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  background-color: #0f0617;
+  color: white;
+}
+
+.carousel-cell > a  {
+ text-decoration: none;
+ color: white;
+ width: 30%;
+}
+
+.carousel-cell > a >img{
+    width: 50rem;
+    height: 25rem;
+}
+.carousel-cell{
+  margin: 2rem;
+}
+
+.carousel-cell > a >p{
+  width: 50%;
+  font-size: 1.5rem;
+}
+h1{
+  font-size: 3rem;
+  margin-top: 2rem;
+  padding-left: 4rem;
+}
+.kd_tech>a{
+  text-decoration: none;
+  color: white;
+  margin-left: 90%;
+  font-size: 2rem;
+}
+.kd_head>a{
+  text-decoration: none;
+  color: white;
+  margin-left: 90%;
+  font-size: 2rem;
+}
+.kd_apple>a{
+  text-decoration: none;
+  color: white;
+  margin-left: 90%;
+  font-size: 2rem;
+}
+.kd_tesla>a{
+  text-decoration: none;
+  color: white;
+  margin-left: 90%;
+  font-size: 2rem;
+}
+.kd_local>a{
+  text-decoration: none;
+  color: white;
+  margin-left: 90%;
+  font-size: 2rem;
+}

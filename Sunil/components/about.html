@@ -7,51 +7,7 @@
     <title>ZEE5: AboutUs</title>
     <link rel="stylesheet" href="./navbar.css" />
     <link rel="stylesheet" href="./footer.css" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      #sh_navbar {
-        position: sticky;
-        top: 0px;
-        z-index: 10;
-      }
-      #sh_aboutUs {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        background-color: #0f0617;
-      }
-      #sh_aboutUs > div {
-        width: 90%;
-        height: auto;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        background-color: #0f0617;
-        color: white;
-        /* border: 1px solid green; */
-        padding: 10px 15px 10px 15px;
-      }
-      #sh_aboutUs > div > h1 {
-        text-align: center;
-        margin: auto;
-        /* margin-top: 10px; */
-      }
-      #sh_aboutUs > div > p {
-        width: 96.5%;
-        text-align: left;
-        margin: auto;
-        line-height: 1.5;
-        font-size: 18px;
-      }
-    </style>
+    <link rel="stylesheet" href="./about.css" />
   </head>
   <body>
     <div id="sh_navbar"></div>
@@ -100,6 +56,8 @@
   </body>
 </html>
 <script type="module">
+  //<---------Navbar importing and appending and background fading------->
+
   import {
     navbar,
     getData,
@@ -107,12 +65,11 @@
     main,
     debouncing,
     id,
-    // login,
-    // logIN,
-    // loggeduesr,
-    // logout,
+    naam,
+    loggeduser,
+    logout,
   } from "./navcom.js";
-  import footer from "./footer.js";
+
   // console.log(footer);
 
   // console.log(navbar);
@@ -124,20 +81,28 @@
 
   document.getElementById("search").addEventListener("focus", () => {
     document.getElementById("sh_aboutUs").setAttribute("class", "sh_blury");
-    // document.getElementById("sh_footer").setAttribute("class", "sh_blury1");
   });
 
   document.getElementById("search").addEventListener("focusout", () => {
     document.getElementById("sh_aboutUs").setAttribute("class", "");
-    // document.getElementById("sh_footer").setAttribute("class", "");
+    window.location.reload();
   });
 
+  //<--------Footer Importing and appending-------->
+
+  import footer from "./footer.js";
   let footContainer = document.getElementById("sh_footer");
   footContainer.innerHTML = footer();
 
-  logIN();
-
-  if (login) {
-    logout();
+  //<----------Showing UserName and Logout Functionality------->
+  let login = localStorage.getItem("login") || false;
+  if (login === true) {
+    console.log(login);
+    naam(login);
   }
+
+  document.getElementById("login").addEventListener("click", (e) => {
+    e.preventDefault();
+    logout(login);
+  });
 </script>

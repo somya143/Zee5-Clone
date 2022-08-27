@@ -45,9 +45,13 @@ let navbar = () => {
     id="search"
     placeholder="Search for Movies, Shows etc"
   />
+ fw19_0926_day_5
   <button id="login"><a id="loggedin" href="./components/login.html">LOGIN</a></button>
+
+  <button id="login"><a id="loggedin" href="">LOGIN</a></button>
+ main
   <button id="buyplan">
-    <a href="">BUY PLAN</a>
+    <a href="./Buyplan1.html">BUY PLAN</a>
   </button>
   <div id="sh_lines">
     <hr />
@@ -98,9 +102,9 @@ let appendData = (data) => {
 
     let name = document.createElement("h3");
     name.innerText = el.title;
-    name.addEventListener("click", function (e) {
-      e.preventDefault();
-      click(el);
+    name.addEventListener("click", function () {
+      localStorage.setItem("Movie", JSON.stringify(el));
+      window.location.href = "details.html";
     });
     div.append(name);
     container.append(div);
@@ -123,36 +127,42 @@ let debouncing = () => {
   }, 2000);
 };
 
-// document.getElementById("search").addEventListener("input", debouncing);
+// let click = (data) => {
+//   console.log(data);
+//   localStorage.setItem("Movie", JSON.stringify(data));
+//   window.location.href = "details.html";
+// };
 
-let click = (data) => {
-  console.log(data);
-  localStorage.setItem("Movie", JSON.stringify(data));
-  // window.location.href = "details.html";
+//<--------innerText(UserName)------->
+let loggeduser = [];
+let naam = (login) => {
+  if (login) {
+    loggeduser = JSON.parse(localStorage.getItem("LoggedIn"));
+    document.getElementById(
+      "loggedin"
+    ).innerText = `${loggeduser[0].name} / LOGOUT`;
+    document.getElementById("login").style.width = "200px";
+  } else {
+    loggeduser = [];
+  }
 };
 
-// document.getElementById("sh_lines").addEventListener("click", (e) => {
-//   console.log(2);
-// });
-
-// let login = localStorage.getItem("login") || false;
-// let loggeduesr = JSON.parse(localStorage.getItem("LoggedIn"));
-// let logIN = () => {
-//   if (login) {
-//     document.getElementById(
-//       "loggedin"
-//     ).innerText = `${loggeduesr[0].name} / LOGOUT`;
-//     document.getElementById("login").style.width = "200px";
-//   }
-// };
-
-// let logout = () => {
-//   document.getElementById("login").addEventListener("click", () => {
-//     login = false;
-//     document.getElementById("loggedin").innerText = "LOGIN";
-//     window.location.href = "#";
-//   });
-// };
+//<--------to logout ------->
+let logout = (login) => {
+  console.log(login);
+  if (login) {
+    login = false;
+    localStorage.setItem("login", login);
+    document.getElementById("loggedin").innerText = "LOGIN";
+    alert(`${loggeduser[0].name} is logged out.`);
+    loggeduser = [];
+    window.location.href = "./login.html";
+    console.log(123);
+  } else if (!login) {
+    window.location.href = "./login.html";
+    console.log(123456);
+  }
+};
 
 export {
   navbar,
@@ -161,8 +171,7 @@ export {
   main,
   debouncing,
   id,
-  // login,
-  // logIN,
-  // loggeduesr,
-  // logout,
+  naam,
+  loggeduser,
+  logout,
 };
