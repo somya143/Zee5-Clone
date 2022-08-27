@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+#sh_navbar {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+  }
+#sh_navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f0617;
+    color: white;
+    /* border: 1px solid green; */
+    padding: 10px 15px 0px 15px;
+  }
+  #sh_container1 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: center;
+    /* border: 1px solid red; */
+  }
+  #sh_container1 > div > img {
+    width: 50px;
+    height: 50px;
+  }
+  #sh_container1 > div > a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  #sh_container1 > div:hover {
+    text-decoration: underline;
+  }
+  #sh_container2 {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    align-items: center;
+    /* border: 1px solid yellow; */
+  }
+  #sh_container2 > input {
+    width: 42%;
+    height: 40px;
+    border: none;
+    outline: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: #0f0617;
+    color: lightgray;
+    padding-left: 10px;
+    margin-left: 20px;
+  }
+  #sh_container2 > input:focus {
+    /* width: 50%; */
+    /* padding-left: 30px; */
+    outline: 1px solid #8230c6;
+  }
+  #login {
+    width: 10%;
+    height: 40px;
+    border: 2px solid whitesmoke;
+    background-color: #0f0617;
+    border-radius: 5px;
+    margin-left: -10px;
+  }
+  #login:hover {
+    background-color: white;
+  }
+  #login:hover > a {
+    background-color: white;
+    color: #0f0617;
+  }
+  #login > a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+  }
+  #buyplan {
+    width: 18%;
+    height: 40px;
+    background-color: #8230c6;
+    border-radius: 5px;
+    margin-left: -10px;
+  }
+  #buyplan:hover {
+    background-color: #460f73;
+  }
+  #buyplan > a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  #sh_lines {
+    width: 4%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 4px;
+    border-radius: 40px;
+    /* border: 0.1px solid whitesmoke; */
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+  #sh_lines > hr {
+    width: 80%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  #sh_lines :hover {
+    cursor: pointer;
+  }
+  #sh_lines > div {
+    display: none;
+    position: absolute;
+    width: 300px;
+    background-color: #0f0617;
+    border-radius: 10px;
+    padding: 0px 15px;
+    padding-bottom: 10px;
+    margin-right: 210px;
+    margin-top: 330px;
+  }
+  #sh_lines:hover > div {
+    display: block;
+    transition: all 0.5s;
+    gap: 10px;
+  }
+  #sh_lines > div > div {
+    padding: 12px 15px;
+    background-color: #0f0617;
+    border-radius: 10px;
+    text-align: center;
+  }
+  #sh_lines > div > div:hover {
+    background-color: #1f0335;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+  #sh_lines > div > div > a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  #sh_lines:hover > #navbar {
+    filter: blur(3px);
+    opacity: 0.5;
+    transform: scale(0.98);
+    box-shadow: none;
+  }
+  #sh_result {
+    width: 20%;
+    position: absolute;
+    top: 10%;
+    left: 58.5%;
+    /* border: 1px solid green; */
+    border-radius: 10px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #0f0617;
+    padding-left: 5px;
+  }
+  #sh_result > div {
+    /* border: 1px solid teal; */
+    margin-bottom: 10px;
+    color: white;
+  }
+  #sh_result > div > h3:hover {
+    text-decoration: underline;
+  }
+  #sh_dropDown > div {
+    display: none;
+    position: absolute;
+    width: 220px;
+    background-color: #0f0617;
+    margin-left: -80px;
+    border-radius: 10px;
+    padding: 0px 15px;
+    padding-bottom: 10px;
+  }
+  #sh_dropDown > div > div > a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  #sh_dropDown:hover > div {
+    display: block;
+    transition: all 0.5s;
+  }
+  #sh_dropDown > div > div {
+    padding: 12px 15px;
+    background-color: #0f0617;
+    border-radius: 10px;
+    text-align: center;
+  }
+  #sh_dropDown > div > div:hover {
+    background-color: #1f0335;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color:
+    #0f0617;
+}
+
+
+/* middle--part--moviespage */
+
+
+.carousel-cell{
+   padding-left: 2rem;
+   cursor: pointer;
+   
+}
+#liveMovies{
+    margin-top: 5rem;
+}
+/* #liveMovies>h2{
+    
+    color: white;
+    font-family:NotoSansMedium, sans-serif;
+    font-size:2.1rem;
+    font-weight:500;
+    padding-left: 4rem;
+} */
+
+.transfor>img{
+    width: 100%;
+    margin-bottom: 2rem;
+    /* border: 5px solid red; */
+}
+.transfor{
+    margin-top: 4rem;
+    /* border: 5px solid red; */
+}
+#liveMovies>p{
+    font-size: 30px;
+    color: white;
+    padding-left: 40px;
+}
+
+/* movies--middle-part2 */
+
+#Movies{
+    margin-top: 5rem;
+}
+/* #Movies>p{
+    
+    color: white;
+    font-family:NotoSansMedium, sans-serif;
+    font-size:2.1rem;
+    font-weight:500;
+    padding-left: 4rem;
+} */
+.trans>img{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.trans{
+    margin-top: 4rem;
+
+}
+#Movies>p{
+    font-size: 30px;
+    color: white;
+    padding-left: 40px;
+}
+.slider-cell{
+    padding-left: 2rem;
+    cursor: pointer;
+    
+ }
+
+ /* ad-banner */
+
+ #ad{
+    margin-left: 25%;
+ }
+
+ /* movies-middle-part3 */
+
+ #Movies-p3>p{
+    font-size: 30px;
+    color: white;
+    padding-left: 40px;
+    padding-top: 20px;
+ }
+ #Movies-p3{
+    margin-top: 5rem;
+}
+
+/* movies-middle-part4 */
+
+#Movies-p4>p{
+    font-size: 30px;
+    color: white;
+    padding-left: 40px;
+    padding-top: 20px;
+ }
+ #Movies-p4{
+    margin-top: 5rem;
+}
+
+/* movies-middle-part5 */
+
+#Movies-p5>p{
+    font-size: 30px;
+    color: white;
+    padding-left: 40px;
+    padding-top: 20px;
+ }
+ #Movies-p5{
+    margin-top: 5rem;
+}
+#picDiv{
+  padding-left: 2rem;
+  cursor: pointer;
+  
+}
+#picDiv>img{
+  width: 100%;
+  margin-bottom: 2rem;
+}
+#picDiv{
+  margin-top: 4rem;
+
+}

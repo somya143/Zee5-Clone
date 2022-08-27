@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZEE5: SignUp</title>
+    <link rel="stylesheet" href="../components/navbar.css" />
+    <link rel="stylesheet" href="../components/footer.css" />
+    <link rel="stylesheet" href="./signup.css" />
+  </head>
+  <body>
+    <div id="sh_navbar"></div>
+    <div id="sh_result"></div>
+
+    <div id="sh_container">
+      <div id="sh_main">
+        <h4><a href="./index.html">X</a></h4>
+        <h3>Create a new account</h3>
+        <p>
+          Create an account to continue enjoying uninterrupted video and
+          personalised experience
+        </p>
+        <span
+          ><button>
+            <a
+              href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.zee5.com%3Fid%3Dauth434459&response_type=permission%20id_token&scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&client_id=171585693881-93jei1bqpoaejkq5ha63iemuq8bbmoar.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.zee5.com&fetch_basic_profile=true&gsiwebsdk=2&flowName=GeneralOAuthFlow"
+              target="_blank"
+            >
+              <img
+                src="https://www.zee5.com/images/google-social-icon-circle.svg?ver=2.51.89"
+                alt=""
+              />Sign in</a
+            >
+          </button></span
+        >
+        <div>or</div>
+        <form id="form">
+          <label for="" class="label">User Name</label> <br />
+          <input type="text" id="sh_name" /> <br />
+          <hr />
+          <label for="" class="label">Enter Email</label> <br />
+          <input type="email" id="sh_email" /> <br />
+          <hr />
+          <label for="" class="label">Password</label> <br />
+          <input type="password" id="sh_password" /><br />
+          <hr />
+          <label for="" class="label">Mobile Number</label> <br />
+          <input type="text" id="sh_number" />
+          <br />
+          <hr />
+          <p>
+            By proceeding you agree to our
+            <a href="https://www.zee5.com/termsofuse">Terms of Services</a> &
+            <a href="https://www.zee5.com/privacypolicy">Privacy Policy</a>
+          </p>
+          <br />
+          <button id="sign_up">Sign-Up</button>
+        </form>
+        <p>Already registered? <a href="./login.html">Login</a></p>
+      </div>
+      <div id="sh_footer"></div>
+    </div>
+  </body>
+</html>
+<script type="module">
+  //<---------Navbar importing and appending and background fading------->
+  import {
+    navbar,
+    getData,
+    appendData,
+    main,
+    debouncing,
+    id,
+  } from "../components/navcom.js";
+
+  let navContainer = document.getElementById("sh_navbar");
+  navContainer.innerHTML = navbar();
+
+  document.getElementById("search").addEventListener("input", debouncing);
+
+  document.getElementById("search").addEventListener("focus", () => {
+    document.getElementById("sh_container").setAttribute("class", "sh_blury");
+  });
+
+  document.getElementById("search").addEventListener("focusout", () => {
+    document.getElementById("sh_container").setAttribute("class", "");
+  });
+
+  //<--------Footer Importing and appending-------->
+
+  import footer from "../components/footer.js";
+  let footContainer = document.getElementById("sh_footer");
+  footContainer.innerHTML = footer();
+
+  // <------------ Sign Up Funtionality --------->
+
+  class User {
+    constructor(n, e, p, m) {
+      this.name = n;
+      this.email = e;
+      this.password = p;
+      this.number = m;
+    }
+  }
+
+  let userData = JSON.parse(localStorage.getItem("users")) || [];
+
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let name = form.sh_name.value;
+    let email = form.sh_email.value;
+    let password = form.sh_password.value;
+    let number = form.sh_number.value;
+
+    if (name === "") {
+      alert("Enter User Name");
+      return false;
+    }
+    if (email === "") {
+      alert("Enter Email-Id");
+      return false;
+    }
+    if (password.length < 5) {
+      alert("Your Password should be more than 5 letters");
+      return false;
+    }
+    if (number.length < 10) {
+      alert("Please provide 10 digit number");
+      return false;
+    }
+
+    let check = userData.filter((el) => {
+      return el.email === email;
+    });
+
+    if (check.length > 0) {
+      alert("User already exists!");
+      return false;
+    } else {
+      let user = new User(name, email, password, number);
+
+      userData.push(user);
+      localStorage.setItem("users", JSON.stringify(userData));
+      alert("Sign-Up Successfull");
+      form.reset();
+      window.location.href = "login.html";
+    }
+  });
+
+  //<----------Changing Color of Sign Up Button-------->
+
+  form.addEventListener("input", () => {
+    let name = form.sh_name.value;
+    let email = form.sh_email.value;
+    let password = form.sh_password.value;
+    let number = form.sh_number.value;
+
+    if ((name !== "") & (email !== "") & (password !== "") & (number !== "")) {
+      document.getElementById("sign_up").style.backgroundColor = "#350c59";
+      document.getElementById("sign_up").style.color = "white";
+    }
+  });
+</script>

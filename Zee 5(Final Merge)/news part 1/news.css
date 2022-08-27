@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    background-color: 
+    #0f0617;
+}
+
+#kd_mainHeading{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
+}
+#kd_mainHeading >div>img{
+width: 75%;
+border-radius: 1rem;
+}
+h1{
+    font-size: 5rem;
+    margin: 3rem;
+    padding-left: 5rem;
+    color: white;
+}
+#kd_mainHeading >div>h4{
+    font-size: 2rem;
+   width: 50%;
+   color: white;
+   margin-top: 2rem;
+}
+
+#kd_mainHeading >div{
+    width: 90%;
+    margin:auto;
+    cursor: pointer;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+    html{
+        font-size: 46.5%;
+    }
+    
+    #kd_mainHeading{
+       
+        grid-template-columns:repeat(2,1fr);
+        
+    }
+    #kd_mainHeading >div>img{
+        width: 100%;
+        border-radius: 1rem;
+        }
+}
+
+@media all and (min-width: 320px) and (max-width: 767px){
+    html{
+        font-size: 40.5%;
+    }
+    
+    #kd_mainHeading{
+       
+        grid-template-columns:repeat(1,1fr);
+        
+    }
+    h1{
+        text-align: center;
+    }
+    #kd_mainHeading >div>img{
+        width: 100%;
+        border-radius: 1rem;
+        }
+}

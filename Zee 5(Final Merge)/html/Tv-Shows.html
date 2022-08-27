@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tv-Shows</title>
+    <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+
+</head>
+
+<body>
+<div id="sh_navbar"></div>
+<div id="sh_result"></div>
+
+<div id="sh_main">
+    <navbar>
+        <div class="slideshow-container">
+            <div class="items mySlides fade">
+                <img src="https://akamaividz2.zee5.com/image/upload/w_1420,h_569,c_scale,f_webp,q_auto:eco/resources/0-6-366/cover/1920x7702ea2821b1a1d40d582e57c5037068307.jpg" />
+            </div>
+
+            <div class="items mySlides fade">
+                <img src="https://akamaividz2.zee5.com/image/upload/w_1420,h_569,c_scale,f_webp,q_auto:eco/resources/0-0-1z5191648/cover/1920x770902b507035da4963aa771afbadfcb032.jpg" />
+            </div>
+
+            <div class="items mySlides fade">
+                <img src="https://akamaividz2.zee5.com/image/upload/w_1420,h_569,c_scale,f_webp,q_auto:eco/resources/0-6-3392/cover/1920x77021ec78f7dcdb410f920f825745418a29.jpg" />
+            </div>
+
+            <div class="items mySlides fade">
+                <img src="https://akamaividz2.zee5.com/image/upload/w_1420,h_569,c_scale,f_webp,q_auto:eco/resources/0-6-4z5193948/cover/1920x770c185cd2dcdf44e4b8936c63651223aa7ccfa5ed3ab7d48198225030d921ebc86.jpg" />
+            </div>
+            <div class="items mySlides fade">
+                <img src="https://akamaividz2.zee5.com/image/upload/w_1420,h_569,c_scale,f_webp,q_auto:eco/resources/0-0-1z5177236/cover/1920x7703b607b59630842e4880220402e4bce7973b9535d9e7b49a287ba4a9996100e95.jpg" />
+            </div>
+
+
+            <a class="prev" onclick="prev()">&#10094;</a>
+            <a class="next" onclick="next()">&#10095;</a>
+        </div>
+        <!-- ------navbar end------ -->
+    </navbar>
+
+
+
+
+    <section>
+        <div class="main">
+            <div class="top">
+                <h1>Zee TV Shows</h1>
+
+            </div>
+            <div class="more_container">
+
+            </div>
+
+    </section>
+
+
+
+
+    <!-- --------------------Footer ----------------- -->
+
+<div id="sh_footer"></div>
+
+</div>
+</body>
+
+</html>
+<script src="../js/navb.js"></script>
+<script src="../js/slider.js"></script>
+<script src="../js/1.js"></script>
+<script src="../js/Tv-show.js"></script>
+<script src="../js/main.js"></script>
+<script type="module">
+
+
+
+import {
+  navbar,
+  getData,
+  appendData,
+  main,
+  debouncing,
+  id,
+  naam,
+  loggeduser,
+  logout,
+} from "../components/navcom.js";
+// console.log(navbar());
+
+// document.getElementById("sh_navbar").innerHTML = navbar();
+
+let navContainer = document.getElementById("sh_navbar");
+navContainer.innerHTML = navbar();
+
+document.getElementById("search").addEventListener("input", debouncing);
+
+document.getElementById("search").addEventListener("focus", () => {
+  document.getElementById("sh_main").setAttribute("class", "sh_blury");
+});
+
+document.getElementById("search").addEventListener("focusout", () => {
+  document.getElementById("sh_main").setAttribute("class", "");
+  window.location.reload();
+});
+
+//<--------Footer Importing and appending-------->
+
+import footer from "../components/footer.js";
+let footContainer = document.getElementById("sh_footer");
+footContainer.innerHTML = footer();
+
+//<----------Showing UserName and Logout Functionality------->
+let login = localStorage.getItem("login") || "false";
+
+if (login === "true") {
+  naam(login);
+}
+
+document.getElementById("login").addEventListener("click", (e) => {
+  e.preventDefault();
+  logout(login);
+});
+</script>
