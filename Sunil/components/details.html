@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="sh_navbar"></div>
+    <div id="sh_details">
+      <div id="sh_movie"></div>
+    </div>
+  </body>
+</html>
+<script>
+  let data = JSON.parse(localStorage.getItem("Movie"));
+  let appendData = (data) => {
+    let container = document.getElementById("sh_movie");
+    container.innerHTML = null;
+
+    if (!data) {
+      let div = document.createElement("div");
+      let name = document.createElement("h3");
+      name.innerText = "No Result Found";
+      div.append(name);
+      container.append(div);
+    }
+
+    data.forEach((el) => {
+      let div = document.createElement("div");
+      div.style.cursor = "pointer";
+
+      let div1 = document.createElement("div");
+      let img = document.createElement("img");
+      img.src = `https://image.tmdb.org/t/p/w500${el.poster_path}`;
+      div1.append(img);
+
+      let div2 = document.createElement("div");
+      let title = document.createElement("h2");
+      title.innerText = el.title || el.name;
+
+      let year = document.createElement("h3");
+      year.innerText = `Released On :- ${el.release_date}`;
+
+      let rating = document.createElement("h3");
+      rating.innerText = `Rating :- ${Math.floor(el.vote_average)}`;
+
+      let description = document.createElement("h4");
+      cast.innerText = `Story overview :- ${el.overview}`;
+
+      div2.append(title, year, rating, description);
+
+      div.append(div1, div2);
+      container.append(div);
+    });
+  };
+</script>
