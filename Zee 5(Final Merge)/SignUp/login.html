@@ -121,10 +121,9 @@
     if (check.length > 0) {
       login = true;
       localStorage.setItem("login", login);
-      alert(`${login}`);
       localStorage.setItem("LoggedIn", JSON.stringify(check));
       alert("Login successful!");
-      window.location.href = "../index/index.html";
+      window.location.href = "../index.html";
     } else {
       alert("Wrong credentials");
       form.reset();
