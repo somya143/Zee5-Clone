@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MOVIES</title>
+    <link rel="stylesheet" href="../components/footer.css">
   </head>
   <link rel="stylesheet" href="./movies.css" />
   <link
@@ -17,7 +18,13 @@ fw19_0926_day_3
 
 
  main
-    <div class="kd_banner">
+
+
+ <div id="sh_navbar">
+
+ </div>
+
+    <div class="ss_banner">
       <div
         class="main-carousel"
         data-flickity='{ "autoPlay": true ,"wrapAround": true}'
@@ -171,9 +178,9 @@ fw19_0926_day_3
     
     <div class="main-carousel" data-flickity='{"autoPlay": true,"groupCells": true}'>
 
-      <div class="slider-cell trans">
+      <div class="slider-cell trans" onclick="showDiv()">
         <img
-          src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z513117/portrait/1920x770478c174d17894ab79a63d72e6b02a830de9355531fe64e6c9b054018cf7050cf.jpg"
+          id="pic" src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z513117/portrait/1920x770478c174d17894ab79a63d72e6b02a830de9355531fe64e6c9b054018cf7050cf.jpg"
           alt="image"
         />
         
@@ -555,8 +562,15 @@ fw19_0926_day_3
 </div>
 
 
-
+<div id="sh_footer"></div>
 
   </body>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </html>
+
+<script src="movies.js">
+
+ // document.querySelector(".slider-cell>trans")
+</script>
+
+<script src="movies.js" type="module"></script>
