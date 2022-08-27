@@ -45,11 +45,7 @@ let navbar = () => {
     id="search"
     placeholder="Search for Movies, Shows etc"
   />
- fw19_0926_day_5
-  <button id="login"><a id="loggedin" href="./components/login.html">LOGIN</a></button>
-
-  <button id="login"><a id="loggedin" href="">LOGIN</a></button>
- main
+  <button id="login"><a id="loggedin" href="./login.html">LOGIN</a></button>
   <button id="buyplan">
     <a href="./Buyplan1.html">BUY PLAN</a>
   </button>
@@ -99,10 +95,11 @@ let appendData = (data) => {
   data.forEach((el) => {
     let div = document.createElement("div");
     div.style.cursor = "pointer";
-    div.addEventListener("click", function (e) {
+    div.addEventListener("click", () => {
       e.preventDefault();
+      console.log(123);
       localStorage.setItem("Movie", JSON.stringify(el));
-      window.location.href = "./details.html";
+      window.location.href = "details.html";
     });
 
     let name = document.createElement("h3");
