@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#sh_navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+#sh_aboutUs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #0f0617;
+}
+#sh_aboutUs > div {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #0f0617;
+  color: white;
+  /* border: 1px solid green; */
+  padding: 10px 15px 10px 15px;
+}
+#sh_aboutUs > div > h1 {
+  text-align: center;
+  margin: auto;
+  /* margin-top: 10px; */
+}
+#sh_aboutUs > div > p {
+  width: 96.5%;
+  text-align: left;
+  margin: auto;
+  line-height: 1.5;
+  font-size: 18px;
+}

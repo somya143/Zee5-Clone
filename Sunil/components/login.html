@@ -7,152 +7,7 @@
     <title>ZEE5: Login</title>
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="./footer.css" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      #sh_container {
-        width: 100%;
-        height: auto;
-        background-color: #0f0617;
-        padding-top: 50px;
-      }
-      #sh_main {
-        width: 20%;
-        height: auto;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        background-color: #0f0617;
-        color: white;
-        justify-content: center;
-        align-items: center;
-      }
-      #sh_main > h3 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      #sh_main > p {
-        text-align: center;
-        margin-bottom: 20px;
-        color: hsla(0, 0%, 100%, 0.5);
-      }
-      #sh_main > span > button {
-        width: 250px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-bottom: 30px;
-        padding: 2px;
-        border-radius: 10px;
-        margin-top: 20px;
-        background-color: #0f0617;
-        border: 0px;
-      }
-      #sh_main > span > button > a > img {
-        width: 35px;
-        height: 35px;
-      }
-      #sh_main > div {
-        width: 35px;
-        height: 35px;
-        /* border: 1px dotted lightgray; */
-        border-radius: 50px;
-        background-color: #2c054f;
-        text-align: center;
-        margin-bottom: 30px;
-        padding: 5px;
-        padding-top: 7px;
-      }
-      #sh_main > form > input {
-        background-color: #0f0617;
-        border: 0px;
-      }
-      #sh_main > form > input:focus {
-        outline: 0px;
-        color: white;
-        height: 25px;
-      }
-      #sh_main > form > input + br + hr {
-        border-width: 0.2px;
-        color: darkgrey;
-        margin-bottom: 8px;
-      }
-      #form > p {
-        text-align: center;
-        margin-top: 15px;
-        font-size: 14.5px;
-      }
-      #form > p > a {
-        color: blueviolet;
-        text-decoration: none;
-      }
-      #form > button {
-        width: 330px;
-        height: 45px;
-        margin-bottom: 20px;
-        padding: 2px;
-        background-color: #0f0617;
-        border-radius: 10px;
-        color: hsla(0, 0%, 100%, 0.5);
-        font-weight: bold;
-        font-size: 15px;
-        margin-top: 20px;
-        outline: 1px solid hsla(0, 0%, 100%, 0.5);
-        border: 0px;
-        cursor: pointer;
-      }
-      #sh_main > p:last-child {
-        font-size: 14.5px;
-        text-align: center;
-        margin-bottom: 20px;
-        color: white;
-      }
-      #sh_main > p:last-child > a {
-        color: blueviolet;
-        text-decoration: none;
-      }
-      .sh_blury {
-        position: sticky;
-        height: auto;
-        width: 100%;
-        color: grey;
-        background-color: #0d0812;
-        /* backdrop-filter: blur(5px); */
-        top: 10;
-        left: 0;
-        opacity: 0.7;
-        z-index: -1;
-      }
-
-      /* @media all and (min-width: 350px) and (max-width: 900px) {
-        #sh_container {
-          width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          margin: auto;
-          height: auto;
-          background-color: #0f0617;
-          padding-top: 50px;
-          justify-content: space-between;
-        }
-        #sh_main {
-          width: 10%;
-          height: auto;
-          margin: auto;
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: column;
-          background-color: #0f0617;
-          color: white;
-          justify-content: center;
-          align-items: center;
-        }
-      } */
-    </style>
+    <link rel="stylesheet" href="./login.css" />
   </head>
   <body>
     <div id="sh_navbar"></div>
@@ -160,6 +15,7 @@
 
     <div id="sh_container">
       <div id="sh_main">
+        <h4><a href="index.html">X</a></h4>
         <h3>Login to ZEE5</h3>
         <p>
           Login to continue enjoying uninterrupted video and personalised
@@ -207,7 +63,7 @@
             <a href="./forgotpassword.html">Forgot Password?</a>
           </p>
           <br />
-          <button id="sh _login">Log In</button>
+          <button id="sh_login">Log In</button>
         </form>
         <p>New to ZEE5? <a href="./signup.html">Register</a></p>
       </div>
@@ -216,6 +72,7 @@
   </body>
 </html>
 <script type="module">
+  //<---------Navbar importing and appending and background fading------->
   import {
     navbar,
     getData,
@@ -224,8 +81,6 @@
     debouncing,
     id,
   } from "./navcom.js";
-
-  import footer from "./footer.js";
 
   let navContainer = document.getElementById("sh_navbar");
   navContainer.innerHTML = navbar();
@@ -240,16 +95,18 @@
     document.getElementById("sh_container").setAttribute("class", "");
   });
 
+  //<--------Footer Importing and appending-------->
+  import footer from "./footer.js";
+
   let footContainer = document.getElementById("sh_footer");
   footContainer.innerHTML = footer();
 
   //<------------ Login Functionality ------>
 
   let userData = JSON.parse(localStorage.getItem("users")) || [];
+  let login = localStorage.getItem("login") || false;
 
   const form = document.querySelector("form");
-
-  let check = [];
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -257,21 +114,31 @@
     let email = form.sh_email.value;
     let password = form.sh_password.value;
 
-    check = userData.filter((el) => {
+    let check = userData.filter((el) => {
       return el.email === email && el.password === password;
     });
 
     if (check.length > 0) {
-      localStorage.setItem("login", "true");
-      // console.log(check);
+      login = true;
+      localStorage.setItem("login", login);
       localStorage.setItem("LoggedIn", JSON.stringify(check));
       alert("Login successful!");
       form.reset();
       window.location.href = "about.html";
     } else {
       alert("Wrong credentials");
+      form.reset();
     }
   });
 
-  export default check;
+  //<----------Changing Color of Login Button-------->
+  form.addEventListener("input", () => {
+    let email = form.sh_email.value;
+    let password = form.sh_password.value;
+
+    if ((email !== "") & (password.length > 5)) {
+      document.getElementById("sh_login").style.backgroundColor = "#350c59";
+      document.getElementById("sh_login").style.color = "white";
+    }
+  });
 </script>

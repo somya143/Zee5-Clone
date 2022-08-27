@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 #sh_navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+#sh_navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -11,7 +16,7 @@
   background-color: #0f0617;
   color: white;
   /* border: 1px solid green; */
-  padding: 10px 15px 0px 15px;
+  padding: 10px 15px 10px 15px;
 }
 #sh_container1 {
   width: 100%;
@@ -159,8 +164,9 @@
 #sh_result {
   width: 20%;
   position: absolute;
-  top: 10%;
+  top: 12%;
   left: 58.5%;
+  z-index: 10;
   /* border: 1px solid green; */
   border-radius: 10px;
   font-size: 18px;
@@ -170,6 +176,7 @@
   align-items: flex-start;
   background-color: #0f0617;
   padding-left: 5px;
+  padding-top: 12px;
 }
 #sh_result > div {
   /* border: 1px solid teal; */
