@@ -46,3 +46,21 @@ body{
     font-family:NotoSansMedium, sans-serif;
     margin-top: 1rem;
 }
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+    html{
+        font-size: 52.5%;
+    }
+    .carousel-cell>img{
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 320px) and (max-width: 767px){
+    html{
+        font-size: 42.5%;
+    }
+    .carousel-cell>img{
+        width: 100%;
+    }
+}
