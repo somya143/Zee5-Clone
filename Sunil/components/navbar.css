@@ -10,13 +10,16 @@
 }
 #sh_navbar {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  
   background-color: #0f0617;
   color: white;
   /* border: 1px solid green; */
   padding: 10px 15px 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+   /* justify-content: center; */
+  
 }
 #sh_container1 {
   width: 100%;
@@ -24,6 +27,7 @@
   justify-content: flex-start;
   gap: 30px;
   align-items: center;
+  /* justify-content: center; */
   /* border: 1px solid red; */
 }
 #sh_container1 > div > img {
@@ -35,6 +39,8 @@
   text-decoration: none;
   color: white;
   font-weight: bold;
+  font-size: large;
+  
 }
 #sh_container1 > div:hover {
   text-decoration: underline;
@@ -184,6 +190,7 @@
 }
 #sh_result > div > h3:hover {
   text-decoration: underline;
+  
 }
 #sh_dropDown > div {
   display: none;

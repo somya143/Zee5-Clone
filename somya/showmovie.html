@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watch movies here</title>
+    <style>
+        *{
+            background-color: #0f0617;
+        }
+        #container{
+            border: 1px solid;
+            width: 30%;
+            height: 300px;
+            margin: auto;
+        }
+        #container>img{
+            width: 100%;
+            height: 100%;
+            margin-top: 100px;
+        }
+    </style>
 </head>
 <body>
     
@@ -16,8 +32,16 @@
 </html>
 
 <script>
-   let dataFromLs = JSON.parse(localStorage.getItem("movie"))
-    let cont = document.getElementById("container");
-    cont.append(dataFromLs)
+   let pic = JSON.parse(localStorage.getItem("movie"))
+   console.log(pic)
+   let cont = document.getElementById("container");
+   function getPic(){
+    let img = document.createElement("img");
+    img.src = pic
+    
+    cont.append(img);
+   }
+    getPic();
+    
 
 </script>

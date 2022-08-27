@@ -69,12 +69,15 @@ console.log(navbar());
 
 document.getElementById("sh_navbar").innerHTML=navbar();
 
+let arr = [];
+document.getElementById("picDiv").addEventListener("click" , showDiv)
 
-let pic=document.getElementById("picDiv")
-pic.addEventListener("click" , showDiv)
 function showDiv(){
-  localStorage.setItem("movie" , JSON.stringify(pic));
+ // let pic = document.getElementById("picDiv");
+  arr.push("")
+  localStorage.setItem("movie" , JSON.stringify(arr));
   // confirm("Are you sure?")
+  alert("Movie added")
   window.location.href = "showmovie.html"
 
 }
