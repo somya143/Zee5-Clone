@@ -333,3 +333,16 @@ body{
  #Movies-p5{
     margin-top: 5rem;
 }
+#picDiv{
+  padding-left: 2rem;
+  cursor: pointer;
+  
+}
+#picDiv>img{
+  width: 100%;
+  margin-bottom: 2rem;
+}
+#picDiv{
+  margin-top: 4rem;
+
+}
