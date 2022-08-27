@@ -45,7 +45,7 @@ let navbar = () => {
     id="search"
     placeholder="Search for Movies, Shows etc"
   />
-  <button id="login"><a id="loggedin" href="./login.html">LOGIN</a></button>
+  <button id="login"><a id="loggedin" href="./login.html" target="_self">LOGIN</a></button>
   <button id="buyplan">
     <a href="./Buyplan1.html">BUY PLAN</a>
   </button>
