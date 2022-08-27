@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#sh_footer {
+  width: 100%;
+  height: auto;
+  /* position: absolute; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  background-color: #0f0617;
+}
+#sh_firstdiv {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#sh_firstdiv > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#sh_firstdiv > div > h4 {
+  color: white;
+}
+#sh_firstdiv > div:nth-child(1) > a > img {
+  width: 110px;
+  height: 35px;
+  margin-top: 2px;
+}
+#sh_firstdiv > div:nth-child(2) > a > img {
+  width: 35px;
+  height: 30px;
+  border-radius: 27px;
+}
+#sh_seconddiv {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px;
+  padding-left: 0px;
+  gap: 20px;
+}
+#sh_seconddiv > p > a {
+  color: hsla(0, 0%, 100%, 0.5);
+  text-decoration: none;
+}
+
+.sh_bisect {
+  color: lightgrey;
+}
+#sh_thirddiv {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  padding-left: 0px;
+}
+.sh_columns {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.sh_columns > h3 {
+  color: white;
+  font-size: 16px;
+}
+.sh_columns > div > a {
+  text-decoration: none;
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 14px;
+}
+.sh_columns > div > a:hover {
+  color: #8230c6;
+}
+#sh_fourthdiv {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 30px;
+  padding: 10px;
+  padding-left: 0px;
+  margin-bottom: 30px;
+}
+#sh_fourthdiv > p {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 14px;
+}
+@media all and (min-width: 350px) and (max-width: 900px) {
+  #sh_footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    background-color: #0f0617;
+  }
+  #sh_firstdiv {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #sh_thirddiv {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 0px;
+  }
+}

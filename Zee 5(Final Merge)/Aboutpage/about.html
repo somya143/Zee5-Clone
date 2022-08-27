@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZEE5: AboutUs</title>
+    <link rel="stylesheet" href="../components/navbar.css" />
+    <link rel="stylesheet" href="../components/footer.css" />
+    <link rel="stylesheet" href="./about.css" />
+  </head>
+  <body>
+    <div id="sh_navbar"></div>
+    <div id="sh_result"></div>
+    <div id="sh_aboutUs">
+      <div>
+        <h1>About Us</h1>
+        <br />
+        <p>
+          At Zee5, the online video streaming Over The Top (OTT) platform, we
+          truly believe that for entertainment to come alive, you need to feel
+          it. That’s where Zee5 brings in the advantage of the language of your
+          comfort! With 12 navigational and featured languages across original
+          features, live TV, catch up TV, lifestyle shows, children's
+          programmes, exclusive short series and acclaimed plays - it’s
+          unlimited entertainment in the language that sounds like home. Zee5
+          offers an exhaustive array of content; with 90+ live TV channels and
+          1.25 lac+ hours of viewing across the languages of English, Hindi,
+          Bengali, Malayalam, Tamil, Telugu, Kannada, Marathi, Oriya, Bhojpuri,
+          Gujarati & Punjabi making it a complete video destination for OTT
+          viewers. Our exhaustive selection of Bollywood and language movies
+          make us the preferred destination for an avid cinema connoisseur.
+        </p>
+        <br />
+        <br />
+        <p>
+          We offer a comfortable and friendly user experience with highly
+          evolved video streaming technology at amazing speed and crystal clear
+          sounds. Language Navigation, Seamless Video playback, Smart Content
+          Search & recommendation, option to choose video quality and much more
+          create a video experience like no other. All you need is a compatible
+          connected device. Tune into Zee5 now, in your language!
+        </p>
+        <br /><br />
+        <p>
+          Zee5 can be accessed at www.zee5.com and application for downloading
+          on mobile, tablet, laptop, desktop, etc. is available on the Google
+          Play Store and Apple App Store.
+        </p>
+        <br />
+        <br />
+      </div>
+      <div id="sh_footer"></div>
+    </div>
+    <!-- <div id="sh_footer"></div> -->
+  </body>
+</html>
+<script type="module">
+  //<---------Navbar importing and appending and background fading------->
+
+  import {
+    navbar,
+    getData,
+    appendData,
+    main,
+    debouncing,
+    id,
+    naam,
+    loggeduser,
+    logout,
+  } from "../components/navcom.js";
+
+  // console.log(footer);
+
+  // console.log(navbar);
+
+  let navContainer = document.getElementById("sh_navbar");
+  navContainer.innerHTML = navbar();
+
+  document.getElementById("search").addEventListener("input", debouncing);
+
+  document.getElementById("search").addEventListener("focus", () => {
+    document.getElementById("sh_aboutUs").setAttribute("class", "sh_blury");
+  });
+
+  document.getElementById("search").addEventListener("focusout", () => {
+    document.getElementById("sh_aboutUs").setAttribute("class", "");
+    window.location.reload();
+  });
+
+  //<--------Footer Importing and appending-------->
+
+  import footer from "../components/footer.js";
+  let footContainer = document.getElementById("sh_footer");
+  footContainer.innerHTML = footer();
+
+  //<----------Showing UserName and Logout Functionality------->
+  let login = localStorage.getItem("login") || "false";
+
+  if (login === "true") {
+    naam(login);
+  }
+
+  document.getElementById("login").addEventListener("click", (e) => {
+    e.preventDefault();
+    logout(login);
+  });
+</script>

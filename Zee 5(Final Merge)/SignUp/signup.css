@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#sh_container {
+  width: 100%;
+  height: auto;
+  background-color: #0f0617;
+  padding-top: 50px;
+}
+#sh_main {
+  width: 22%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #0f0617;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+#sh_main > h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#sh_main > p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+#sh_main > span > button {
+  width: 330px;
+  margin-bottom: 30px;
+  padding: 2px;
+  background-color: white;
+  border-radius: 10px;
+  color: deeppink;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 20px;
+}
+#sh_main > span > button > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: deeppink;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+}
+#sh_main > span > button > a > img {
+  width: 45px;
+  height: 45px;
+}
+#sh_main > div {
+  width: 35px;
+  height: 35px;
+  /* border: 1px dotted lightgray; */
+  border-radius: 50px;
+  background-color: #2c054f;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 5px;
+  padding-top: 7px;
+}
+#sh_main > form > input {
+  background-color: #0f0617;
+  border: 0px;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+#sh_main > form > input:focus {
+  outline: 0px;
+  color: white;
+  height: 25px;
+}
+/* #sh_main > form > input:focus label {
+  margin-bottom: 5px;
+} */
+#sh_main > form > input + br + hr {
+  border-width: 0.2px;
+  color: darkgrey;
+  margin-bottom: 8px;
+}
+#form > p {
+  margin-top: 15px;
+  font-size: 14.5px;
+}
+#form > p > a {
+  color: blueviolet;
+  text-decoration: none;
+}
+#form > button {
+  width: 330px;
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 2px;
+  background-color: #0f0617;
+  border-radius: 10px;
+  color: hsla(0, 0%, 100%, 0.5);
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 20px;
+  outline: 1px solid hsla(0, 0%, 100%, 0.5);
+  border: 0px;
+  cursor: pointer;
+}
+#sh_main > p:last-child {
+  font-size: 14.5px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+#sh_main > p:last-child > a {
+  color: blueviolet;
+  text-decoration: none;
+}
+#sh_main > h4 {
+  text-align: right;
+  color: white;
+  margin-top: -30px;
+  margin-right: -500px;
+}
+#sh_main > h4 > a {
+  color: white;
+  text-decoration: none;
+}
+#sh_main > h4 > a:hover {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
