@@ -64,21 +64,23 @@
 //    // window.location.href = "showmovie.html";
 // }
 
-import {navbar} from "../components/navcom.js";
+import {navbar} from "../Sunil/components/navcom.js";
 console.log(navbar());
 
 document.getElementById("sh_navbar").innerHTML=navbar();
 
 
-let arr = JSON.parse(localStorage.getItem("movie"))||[]
+let pic=document.getElementById("picDiv")
+pic.addEventListener("click" , showDiv)
 function showDiv(){
-    let img = document.getElementsByClassName("trans").innerHTML 
-    arr.push(img);
-    localStorage.setItem("movie" , JSON.stringify(arr))
-    window.location.href = "showmovie.html"
+  localStorage.setItem("movie" , JSON.stringify(pic));
+  // confirm("Are you sure?")
+  window.location.href = "showmovie.html"
+
 }
+
     
-import footer from "../components/footer.js";
+import footer from "../Sunil/components/footer.js";
 console.log(footer());
 
 let footContainer = document.getElementById("sh_footer");
