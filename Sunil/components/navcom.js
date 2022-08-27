@@ -99,13 +99,14 @@ let appendData = (data) => {
   data.forEach((el) => {
     let div = document.createElement("div");
     div.style.cursor = "pointer";
+    div.addEventListener("click", function (e) {
+      e.preventDefault();
+      localStorage.setItem("Movie", JSON.stringify(el));
+      window.location.href = "./details.html";
+    });
 
     let name = document.createElement("h3");
     name.innerText = el.title;
-    name.addEventListener("click", function () {
-      localStorage.setItem("Movie", JSON.stringify(el));
-      window.location.href = "details.html";
-    });
     div.append(name);
     container.append(div);
   });
