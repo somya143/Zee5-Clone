@@ -7,8 +7,8 @@ let navbar = () => {
       alt=""
     />
   </div>
-  <div><a href="../index.html">Home</a></div>
-  <div><a href="../TVshows/TV-Shows.html">TV Shows</a></div>
+  <div><a href="./index.html">Home</a></div>
+  <div><a href="../TVshows/Tv-Shows.html">TV Shows</a></div>
   <div><a href="../somya/movies.html">Movies</a></div>
   <div><a href="../webseries/webseries_single.html">Web Series</a></div>
   <div><a href="../crousel 2/news.html">News</a></div>

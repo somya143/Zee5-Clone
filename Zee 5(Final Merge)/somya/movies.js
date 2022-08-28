@@ -70,7 +70,7 @@ import {
   loggeduser,
   logout,
 } from "../components/navcom.js";
-// console.log(navbar());
+ //console.log(navbar());
 
 // document.getElementById("sh_navbar").innerHTML = navbar();
 
