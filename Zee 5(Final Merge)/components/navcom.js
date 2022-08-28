@@ -7,11 +7,11 @@ let navbar = () => {
       alt=""
     />
   </div>
-  <div><a href="../index.html">Home</a></div>
-  <div><a href="../TVshows/TV-Shows.html">TV Shows</a></div>
-  <div><a href="../somya/movies.html">Movies</a></div>
-  <div><a href="../webseries/webseries_single.html">Web Series</a></div>
-  <div><a href="../crousel 2/news.html">News</a></div>
+  <div><a href="./index.html">Home</a></div>
+  <div><a href="./Tv-Shows.html">TV Shows</a></div>
+  <div><a href="./movies.html">Movies</a></div>
+  <div><a href="./webseries_single.html">Web Series</a></div>
+  <div><a href="./news.html">News</a></div>
   <div id="sh_dropDown">
     <img
       id="icon"
@@ -45,9 +45,9 @@ let navbar = () => {
     id="search"
     placeholder="Search for Movies, Shows etc"
   />
-  <button id="login"><a id="loggedin" href="../SignUp/login.html">LOGIN</a></button>
+  <button id="login"><a id="loggedin" href="./login.html">LOGIN</a></button>
   <button id="buyplan">
-    <a href="../buyplan/Buyplan1.html">BUY PLAN</a>
+    <a href="./Buyplan1.html">BUY PLAN</a>
   </button>
   <div id="sh_lines">
     <hr />
@@ -55,8 +55,8 @@ let navbar = () => {
     <hr />
     <div>
       <div><a href="./index.html">Home</a></div>
-      <div><a href="https://www.zee5.com/myaccount/subscription">Buy Plan</a></div>
-      <div><a href="../Aboutpage/about.html">About Us</a></div>
+      <div><a href="./Buyplan1.html">Buy Plan</a></div>
+      <div><a href="./about.html">About Us</a></div>
       <div><a href="https://www.zee5.com/help/?translation=en&country=IN&hextoken=null&platform=desktop_web&user_type=guest&app_version=2.51.89">Help Center</a></div>
       <div><a href="https://www.zee5.com/termsofuse">Terms Of Use</a></div>
       <div><a href="https://www.zee5.com/privacypolicy">Privacy Policy</a></div>
@@ -99,7 +99,7 @@ let appendData = (data) => {
       e.preventDefault();
       console.log(123);
       localStorage.setItem("Movie", JSON.stringify(el));
-      window.location.href = "details.html";
+      window.location.href = "./details.html";
     });
 
     let name = document.createElement("h3");
@@ -154,9 +154,9 @@ let logout = (login) => {
     localStorage.setItem("login", login);
     document.getElementById("loggedin").innerText = "LOGIN";
     loggeduser = [];
-    window.location.href = "../SignUp/login.html";
+    window.location.href = "./login.html";
   } else if (login === "false") {
-    window.location.href = "../SignUp/login.html";
+    window.location.href = "./login.html";
   }
 };
 

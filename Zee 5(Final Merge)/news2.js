@@ -22,7 +22,7 @@ function appendData(data) {
     div.addEventListener("click", () => {
       array.push(el);
       localStorage.setItem("news", JSON.stringify(array));
-      window.location.href = "../show news/show.html";
+      window.location.href = "./show.html";
     });
     let img = document.createElement("img");
     img.src = el.urlToImage;

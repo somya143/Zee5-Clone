@@ -4,20 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Content</title>
-    <link rel="stylesheet" href="../components/footer.js" />
+    <title>News Page</title>
+    <link rel="stylesheet" href="./components/footer.css" />
   </head>
-  <link rel="stylesheet" href="./techNews.css" />
+  <link rel="stylesheet" href="./show.css" />
   <body>
-    <h1>TECHONOLOGY</h1>
-    <div id="kd_mainHeading"></div>
+    <h1>News</h1>
+    <div id="kd_show"></div>
+    <button onclick="show()" class="kd_btn">Go Back</button>
   </body>
-  <script src="./techNews.js"></script>
+  <script src="./show.js"></script>
 </html>
 <script type="module">
   //<--------Footer Importing and appending-------->
 
-  import footer from "../components/footer.js";
+  import footer from "./components/footer.js";
   let footContainer = document.getElementById("sh_footer");
   footContainer.innerHTML = footer();
 </script>

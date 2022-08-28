@@ -27,5 +27,5 @@ function displayNews(array) {
 
 function show() {
   localStorage.clear();
-  window.location.href = "../crousel 2/news.html";
+  window.location.href = "./news.html";
 }

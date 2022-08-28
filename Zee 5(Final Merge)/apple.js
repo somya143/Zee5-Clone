@@ -1,7 +1,7 @@
 let getData = async () => {
   try {
     let res = await fetch(
-      "https://newsapi.org/v2/everything?q=tesla&from=2022-07-27&sortBy=publishedAt&apiKey=dcfb7e46f19f4785a64dea9422ea2784"
+      "https://newsapi.org/v2/everything?q=apple&from=2022-08-24&to=2022-08-24&sortBy=popularity&apiKey=dcfb7e46f19f4785a64dea9422ea2784"
     );
     let data = await res.json();
     console.log(data);
@@ -22,7 +22,7 @@ function appendData(data) {
     div.addEventListener("click", () => {
       array.push(el);
       localStorage.setItem("news", JSON.stringify(array));
-      window.location.href = "../show news/show.html";
+      window.location.href = "./show.html";
     });
     let img = document.createElement("img");
     img.src = el.urlToImage;
