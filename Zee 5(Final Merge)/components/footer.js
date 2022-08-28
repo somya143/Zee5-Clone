@@ -64,7 +64,8 @@ let footer = () => {
   </div>
   <div id="sh_thirddiv">
     <div class="sh_columns">
-      <h3>Popular TV Shows</h3>
+      <h3><a href="./Tv-Shows.html"> Popular TV Shows</a></h3> 
+
       <div>
         <a
           href="https://www.zee5.com/movies/details/kya-meri-sonam-gupta-bewafa-hai/0-0-1z51625"
@@ -97,7 +98,7 @@ let footer = () => {
       </div>
     </div>
     <div class="sh_columns">
-      <h3>Premium Movies</h3>
+      <h3><a href="./movies.html">Premimum Movies</a></h3>
       <div>
         <a
           href="https://www.zee5.com/movies/details/kya-meri-sonam-gupta-bewafa-hai/0-0-1z51625"
@@ -127,7 +128,7 @@ let footer = () => {
       </div>
     </div>
     <div class="sh_columns">
-      <h3>Popular LIVE TV Channels</h3>
+      <h3><a href="./news.html"> Popular LIVE TV Channels</a></h3>
       <div>
         <a href="https://www.zee5.com/live-tv/aaj-tak/0-9-aajtak"
           >Aaj Tak</a
@@ -155,7 +156,7 @@ let footer = () => {
       </div>
     </div>
     <div class="sh_columns">
-      <h3>Popular Web Series</h3>
+      <h3><a href="./webseries_single.html"> Popular Web Series</a></h3>
       <div>
         <a
           href="https://www.zee5.com/web-series/details/sunflower/0-6-3284/latest"

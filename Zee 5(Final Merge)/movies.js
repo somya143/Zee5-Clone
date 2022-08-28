@@ -69,7 +69,7 @@ import {
   naam,
   loggeduser,
   logout,
-} from "../components/navcom.js";
+} from "./components/navcom.js";
 // console.log(navbar());
 
 // document.getElementById("sh_navbar").innerHTML = navbar();
@@ -117,10 +117,10 @@ function showDiv() {
   localStorage.setItem("movie", JSON.stringify(arr));
   // confirm("Are you sure?")
   alert("Movie added");
-  window.location.href = "showmovie.html";
+  window.location.href = "./showmovie.html";
 }
 
-import footer from "../components/footer.js";
+import footer from "./components/footer.js";
 console.log(footer());
 
 let footContainer = document.getElementById("sh_footer");

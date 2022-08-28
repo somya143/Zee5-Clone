@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tv-Shows</title>
-    <link rel="stylesheet" href="../components/footer.css">
-    <link rel="stylesheet" href="../components/navbar.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/1.css">
+    <link rel="stylesheet" href="./components/footer.css">
+    <link rel="stylesheet" href="./components/navbar.css">
+    <link rel="stylesheet" href="./css tv/style.css">
+    <link rel="stylesheet" href="./css tv/1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 
@@ -75,14 +75,12 @@
 </body>
 
 </html>
-<script src="./js/navb.js"></script>
-<script src="./js/slider.js"></script>
-<script src="./js/1.js"></script>
-<script src="./js/Tv-show.js"></script>
-<script src="./js/main.js"></script>
+<script src="./js tv/navb.js"></script>
+<script src="./js tv/slider.js"></script>
+<script src="./js tv/1.js"></script>
+<script src="./js tv/Tv-show.js"></script>
+<script src="./js tv/main.js"></script>
 <script type="module">
-
-
 
 import {
   navbar,
@@ -94,7 +92,7 @@ import {
   naam,
   loggeduser,
   logout,
-} from "../components/navcom.js";
+} from "./components/navcom.js";
 // console.log(navbar());
 
 // document.getElementById("sh_navbar").innerHTML = navbar();
@@ -115,7 +113,7 @@ document.getElementById("search").addEventListener("focusout", () => {
 
 //<--------Footer Importing and appending-------->
 
-import footer from "../components/footer.js";
+import footer from "./components/footer.js";
 let footContainer = document.getElementById("sh_footer");
 footContainer.innerHTML = footer();
 

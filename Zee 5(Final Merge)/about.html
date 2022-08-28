@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZEE5: AboutUs</title>
-    <link rel="stylesheet" href="../components/navbar.css" />
-    <link rel="stylesheet" href="../components/footer.css" />
+    <link rel="stylesheet" href="./components/navbar.css" />
+    <link rel="stylesheet" href="./components/footer.css" />
     <link rel="stylesheet" href="./about.css" />
   </head>
   <body>
@@ -68,7 +68,7 @@
     naam,
     loggeduser,
     logout,
-  } from "../components/navcom.js";
+  } from "./components/navcom.js";
 
   // console.log(footer);
 
@@ -90,7 +90,7 @@
 
   //<--------Footer Importing and appending-------->
 
-  import footer from "../components/footer.js";
+  import footer from "./components/footer.js";
   let footContainer = document.getElementById("sh_footer");
   footContainer.innerHTML = footer();
 
