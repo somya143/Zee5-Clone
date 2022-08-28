@@ -11,17 +11,43 @@
       * {
         background-color: #0f0617;
       }
-      #container {
+      #ss_container {
         border: 1px solid;
-        width: 30%;
-        height: 300px;
+        width: 20%;
+        height: 400px;
         margin: auto;
+        border-radius: 10px;
       }
-      #container > img {
+      #ss_container > img {
         width: 100%;
         height: 100%;
-        margin-top: 100px;
+        border-radius: 10px;
+        /* margin-top: 100px; */
       }
+      button {
+        width: 18%;
+        height: 40px;
+        background-color: #8230c6;
+        border-radius: 5px;
+        margin-left: -10px;
+      }
+      button:hover {
+        background-color: #460f73;
+      }
+      button > a {
+        width: 100%;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      #sh_navbar > #sh_navbar > #sh_container1 > div > a {
+        font-size: 17px;
+        font-weight: bold;
+      }
+      /* #sh_navbar > #sh_navbar {
+        padding-bottom: 15px;
+      } */
     </style>
   </head>
   <body>
@@ -34,7 +60,7 @@
   </body>
 </html>
 
-<script>
+<script type="module">
   let pic = JSON.parse(localStorage.getItem("movie"));
   console.log(pic);
   let cont = document.getElementById("ss_container");
