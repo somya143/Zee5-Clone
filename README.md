@@ -1,5 +1,5 @@
 
-This is Zee5 website clone which is an online movie , web-series, serial etc streaming website .This project is made by 5 people including me in a span of 5 days.
+This is Zee5 website clone which is an online movie , web-series, serial etc streaming website .This is a collaborative project made in a span of 5 days.
 
 ------------------------------------------------------------
 
@@ -7,7 +7,7 @@ This is Zee5 website clone which is an online movie , web-series, serial etc str
 
 An Over the top Streaming service to enjoy the entertainment over the internet.
 
-AS part of unit 2 construct week we cloned the frontend of zee5.com to the best of our ability in a team of 4 within the span of 5 days
+AS part of unit 3 construct week we cloned the frontend of zee5.com to the best of our ability in a team of 4 within the span of 5 days
 
 ## Tech Stack:
 
@@ -23,7 +23,8 @@ AS part of unit 2 construct week we cloned the frontend of zee5.com to the best 
 1. Social Sign-up/Sign-in.
 2. User authentication
 3. Access API data without buffering.
-4. Filter by api Category
+4. Filter by api Category.
+5. Online video streaming.
 
 ## Try it out locally
 
