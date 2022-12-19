@@ -12,10 +12,7 @@ AS part of unit 3 construct week we cloned the frontend of zee5.com to the best 
 ## Tech Stack:
 
 <p>
-   <img src="https://img.icons8.com/color/64/000000/javascript.png"/>
-   <img src="https://img.icons8.com/color/64/000000/html-5.png"/>
-   <img src="https://img.icons8.com/color/64/000000/css3.png" />
-   <img src="https://img.icons8.com/color/64/000000/json.png"/>
+  
 </p>
 
 ## Features:
@@ -32,23 +29,11 @@ This is a simple project. You can use any server to serve up the html pages. Onc
 
 <h1>Snapshots of our project</h1>
 
-1. This is the Landing page of Zee5
+![Screenshot (16)](https://user-images.githubusercontent.com/103635044/208415872-308b7945-1d61-47e9-a6eb-fd9ce0745799.png)
+![Screenshot (17)](https://user-images.githubusercontent.com/103635044/208415883-65845b96-51f7-4395-aab4-b7eff9b52e45.png)
+![Screenshot (18)](https://user-images.githubusercontent.com/103635044/208415890-1c074c27-6fd1-4cd5-841f-d0ce16bee91f.png)
 
-<p>
-   
 
-</p>
-2.This is Sign-up and Sign IN Page
-
-![image](./screenshots/Image20220428172713.png)
-
-3.This is various movie categogy page
-
-![image](./screenshots/Image20220428172715.png)
-
-4.This is video play Feature (Api Data play)
-
-![image](./screenshots/Image20220428172719.png)
 
 
 ## Teams
